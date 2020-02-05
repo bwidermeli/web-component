@@ -1,0 +1,24 @@
+@import 'styles.shared';
+
+.mp-section-sublink {
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $panel-gray-333;
+  }
+
+  &:hover {
+    background-color: $andes-gray-40;
+  }
+
+  &:focus {
+    @include focus-class;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $andes-gray-70;
+    box-shadow: none;
+  }
+}

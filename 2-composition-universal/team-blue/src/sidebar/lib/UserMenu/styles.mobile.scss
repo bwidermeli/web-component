@@ -1,0 +1,27 @@
+@import 'styles.shared';
+
+.mp-user-menu {
+
+  &__operator {
+
+    &-info {
+      padding: 0.875em 1.125em 1.25em;
+    }
+
+    &-name {
+      font-size: 1.125em;
+    }
+  }
+
+  &__link {
+    font-size: 0.9375em;
+    line-height: 2.286em;
+  }
+
+  &__dropdown {
+    top: -3.75em - 1em;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+}

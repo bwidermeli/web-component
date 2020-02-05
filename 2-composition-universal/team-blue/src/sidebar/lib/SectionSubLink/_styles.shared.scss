@@ -1,0 +1,35 @@
+.mp-section-sublink {
+  width: calc(100% + em(24));
+  max-height: em(36);
+  display: flex;
+  align-items: center;
+  padding: em(10) $andes-spacing-24;
+  padding-left: em(64);
+  text-decoration: none;
+  color: $panel-gray-333;
+  transition: background 120ms ease-out, box-shadow 120ms ease-out, color 120ms ease-out;
+  cursor: pointer;
+
+  &__text {
+    width: 100%;
+    font-size: $font-size-14;
+    font-weight: $font-weight-semibold;
+    line-height: (20 / 14);
+  }
+
+  &:active {
+    color: $panel-gray-333;
+    background-color: $andes-gray-70;
+    box-shadow: none;
+  }
+
+  &.is-active {
+    color: $andes-blue-400;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+}
