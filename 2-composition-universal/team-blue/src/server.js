@@ -2,9 +2,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import renderBasket from './blue-basket/render.js';
-import renderSidebar from './sidebar/render.js';
 import renderBuy from './blue-buy/render.js';
-const navigation = require('./sidebar/navigation.json');
 
 const app = express();
 app.use(morgan('dev'));
@@ -16,7 +14,7 @@ app.use('/blue-buy', (req, res) => {
 app.use('/blue-basket', (req, res) => {
   res.send(renderBasket(0));
 });
-app.use('/sidebar-custom', (req, res) => {
+/*app.use('/sidebar-custom', (req, res) => {
   const { panelSelector, active, locale } = req.query;
   let props = {
     panelSelector,
@@ -25,7 +23,7 @@ app.use('/sidebar-custom', (req, res) => {
     navigation
   };
   res.send(renderSidebar(props));
-});
+});*/
 
 app.listen(3001);
 console.log(`🔵  team blue running. fragments are available here:
